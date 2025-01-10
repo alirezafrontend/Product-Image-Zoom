@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "BYekan";
+  src: url(font/BYekan+.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: BYekan;
+}
+
+body {
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* product */
+
+  > .product {
+    width: 70%;
+    height: 90%;
+    background-color: #ececec;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    > .img-product {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+
+      > .img-org {
+        position: relative;
+        width: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        cursor: pointer;
+
+        > img {
+          height: 100%;
+          object-fit: cover;
+        }
+
+        > .zoom-org {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-size: 200%;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+        }
+      }
+
+      > .img-small {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        cursor: pointer;
+
+        > div {
+          width: 31%;
+          border: none;
+          overflow: hidden;
+
+          > img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    > .content-product {
+      width: 48%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+
+      > .name-product {
+        width: 100%;
+        margin-bottom: 20px;
+
+        > h3 {
+          font-size: 20px;
+        }
+      }
+
+      > .content-product {
+        width: 100%;
+        margin-bottom: 30px;
+
+        > p {
+          font-size: 18px;
+        }
+      }
+
+      > .price-product {
+        width: 100%;
+        font-size: 18px;
+        color: #15a715;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      > .color-product {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        > p {
+          width: 100%;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        > span {
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:nth-of-type(1) {
+            background-color: #2d58be;
+            margin-left: 15px;
+          }
+
+          &:nth-of-type(2) {
+            background-color: #11705a;
+          }
+        }
+      }
+
+      > .size-product {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        > p {
+          width: 100%;
+          font-size: 18px;
+          margin-bottom: 5px;
+          font-weight: 600;
+        }
+
+        > span {
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
+          font-size: 14px;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  /* footer */
+
+  #footer-me {
+    width: 220px;
+    height: 175px;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 6%;
+    left: 3%;
+    border-radius: 70px;
+    z-index: 50;
+    cursor: pointer;
+
+    > div:nth-of-type(1) {
+      width: 50px;
+      height: 100%;
+      position: relative;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s;
+
+      > * {
+        > a {
+          > i {
+            font-size: 22px;
+            color: #11705a;
+          }
+        }
+      }
+
+      > div:nth-of-type(1) {
+        position: absolute;
+        top: 15%;
+        right: 20%;
+      }
+
+      > div:nth-of-type(2) {
+        position: absolute;
+        top: 55%;
+        transform: translate(0, -50%);
+        right: 20%;
+      }
+
+      > div:nth-of-type(3) {
+        position: absolute;
+        top: 70%;
+        right: 20%;
+      }
+    }
+
+    &:hover > div:nth-of-type(1) {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    > div:nth-of-type(2) {
+      width: 170px;
+      height: 170px;
+      overflow: hidden;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > div {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid #11705a;
+        > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
